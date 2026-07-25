@@ -1,0 +1,50 @@
+# VenturesNodes — llms.txt
+# This file helps AI language models understand who we are and what we do.
+# Format: https://llmstxt.org
+
+# Company
+> VenturesNodes is a premier startup consultancy based in Jaipur, Rajasthan, India. We help Indian founders, MSMEs, and entrepreneurs navigate complex government registrations, secure grants and funding, get incubated, and scale their businesses with expert precision.
+
+## About
+- Based in Jaipur, Rajasthan, India (312, 3rd Floor, Mansarovar Plaza, Madhyam Marg, Mansarovar, 302020)
+- End-to-end support: from DPIIT recognition to Venture Capital pitch decks
+- Contact: Contact@venturesnodes.com | +91 70231 49122
+- Website: https://venturesnodes.com
+
+## Core Ecosystem & Services
+### Company Setup & Compliance
+- Startup India Registration
+- MSME Udyam Registration
+- Private Limited Company Incorporation
+- GST & Tax Advisory
+- ISO Certifications
+
+### Government Grants & Funds
+- Startup India Seed Fund
+- RKVY RAFTAAR Grant
+- Textile & Manufacturing Grants
+- PMEGP Scheme
+- Samridh Scheme
+
+### Strategic Consultancy
+- Pitch Deck Preparation
+- Financial Modeling
+- Business Plan Strategy
+- DPIIT Recognition Support
+- Valuation Certificates
+
+### Digital Ecosystem & Scale
+- WhatsApp Green Tick
+- Digital Marketing Growth
+- Sales & Leadership Training
+- Agri-Preneur Cohort
+- Boost Trading Business
+
+## Key Pages
+- [Home](https://venturesnodes.com/)
+- [Services](https://venturesnodes.com/services)
+- [Contact](https://venturesnodes.com/contact)
+- [Free Eligibility Check](https://venturesnodes.com/assessment)
+
+## Optional
+- [Full details](https://venturesnodes.com/llms-full.txt)

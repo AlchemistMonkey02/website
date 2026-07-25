@@ -1,0 +1,60 @@
+# VenturesNodes — llms-full.txt
+# Comprehensive AI Documentation for VenturesNodes
+# Format: https://llmstxt.org
+
+# Company Profile
+> VenturesNodes is a premier startup consultancy headquartered in Jaipur, Rajasthan, India. We specialize in providing end-to-end guidance and operational execution for Indian founders, MSMEs, and rapidly scaling startups. Our mission is to bridge the gap between brilliant business ideas and the complex ecosystem of government compliances, non-dilutive grants, venture capital funding, and digital scalability.
+
+## Contact Information
+- Address: 312, 3rd Floor, Mansarovar Plaza, Madhyam Marg, Mansarovar, Jaipur, Rajasthan, 302020
+- Phone: +91 70231 49122
+- Email: Contact@venturesnodes.com
+- Website: https://venturesnodes.com
+
+---
+
+# Comprehensive Service Offerings
+
+## 1. Company Setup & Compliance
+We ensure that founders launch their businesses correctly with absolute legal protection and zero compliance headaches.
+
+- **Startup India Registration**: We help startups get officially recognized by the DPIIT, unlocking massive benefits like Angel Tax Exemption (Section 56), fast-track patent filings, and relaxation in government tenders.
+- **MSME Udyam Registration**: Registration assistance to access collateral-free loans, subsidies on patents, and protection against delayed payments.
+- **Private Limited Company Incorporation**: The most scalable structure for ambitious startups. We handle MoA/AoA drafting, SPICe+ filing, and obtaining PAN/TAN.
+- **GST & Tax Advisory**: Seamless GST registration and monthly/annual return filings to ensure you remain compliant with state and central authorities.
+- **ISO Certifications**: Assisting businesses in obtaining global quality standard certifications to increase trust and competitiveness.
+
+## 2. Government Grants & Funds
+We are experts in unlocking non-dilutive capital provided by the state and central government.
+
+- **Startup India Seed Fund**: Assistance in securing up to ₹25 Lakhs for proof of concept, prototype development, product trials, and market entry.
+- **RKVY RAFTAAR Grant**: Specialized funding up to ₹50 Lakhs for agri-startups focusing on technology and innovation in agriculture.
+- **Textile & Manufacturing Grants**: Grants up to ₹2 Cr for technology upgradation and infrastructure development in the manufacturing sector.
+- **PMEGP Scheme**: Credit-linked subsidy scheme offering up to ₹40 Lakhs for establishing new micro-enterprises in the manufacturing and service sectors.
+- **Samridh Scheme**: Funding up to ₹25 Lakhs specifically tailored for software product startups to accelerate growth.
+
+## 3. Strategic Consultancy
+Expert guidance to ensure your business model is fundamentally sound and highly attractive to investors.
+
+- **Pitch Deck Preparation**: We craft visually stunning narrative decks combined with robust data to help you raise capital successfully from Angel Investors and VCs.
+- **Financial Modeling**: 3-5 year financial projections, cap table structuring, and unit economics analysis to prove your startup's worth.
+- **Business Plan Strategy**: Comprehensive go-to-market strategies, competitor analysis, and operational roadmaps.
+- **DPIIT Recognition Support**: Guaranteed approval process handling for crucial tax exemptions and self-certifications.
+- **Valuation Certificates**: Discounted Cash Flow (DCF) method valuations signed by IBBI registered valuers, essential for fundraising and issuing ESOPs.
+
+## 4. Digital Ecosystem & Scale
+Once the foundation is set, we help you accelerate your market reach through modern digital transformation.
+
+- **WhatsApp Green Tick**: Official business API verification to build immediate brand trust and increase open rates.
+- **Digital Marketing Growth**: Omnichannel marketing strategies encompassing SEO, paid advertising, and social media to scale your customer base.
+- **Sales & Leadership Training**: Expert-led B2B sales workshops and leadership coaching to transform founders into high-closing executives.
+- **Agri-Preneur Cohort**: Specialized mentorship and funding pathways up to ₹20 Lakhs exclusively for agri-tech innovators.
+- **Boost Trading Business**: Strategic cash flow management, overdraft facility structuring, and working capital solutions for traders.
+
+---
+
+## Free Eligibility Check
+VenturesNodes offers a unique "Free Startup Eligibility Check" at https://venturesnodes.com/assessment. This assessment allows founders to input their basic business parameters to instantly discover which specific government grants, incubators, and schemes they qualify for.
+
+## Technical Architecture
+This website utilizes a modern, hybrid Next.js and PHP architecture, hosted on Hostinger. It employs a custom-built SQLite database for a fully dynamic SEO management console, allowing for real-time updates to Meta Tags, URL slugs, and 301 redirects without requiring new builds.

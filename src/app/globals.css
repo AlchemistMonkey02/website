@@ -1,0 +1,194 @@
+
+@import "tailwindcss";
+
+:root {
+  --background: #FFFFFF;
+  --foreground: #0B1221;
+  
+  --primary: #05A5C7; /* Logo Cyan */
+  --primary-foreground: #FFFFFF;
+  
+  --secondary: #081024; /* Logo Navy */
+  --secondary-foreground: #FFFFFF;
+  
+  --accent: #E0F7FA;
+  --accent-foreground: #081024;
+  
+  --muted: #F8FAFC;
+  --muted-foreground: #64748B;
+  
+  --border: rgba(8, 16, 36, 0.08);
+  
+  --radius: 12px;
+  --section-padding: 120px;
+}
+
+@theme inline {
+  --color-background: var(--background);
+  --color-foreground: var(--foreground);
+  --color-primary: var(--primary);
+  --color-primary-foreground: var(--primary-foreground);
+  --color-secondary: var(--secondary);
+  --color-secondary-foreground: var(--secondary-foreground);
+  --color-accent: var(--accent);
+  --color-accent-foreground: var(--accent-foreground);
+  --color-muted: var(--muted);
+  --color-muted-foreground: var(--muted-foreground);
+  --color-border: var(--border);
+  
+  --font-heading: var(--font-heading), sans-serif;
+  --font-body: var(--font-body), sans-serif;
+  --font-secondary: var(--font-body), sans-serif;
+  
+  --radius-lg: 20px;
+  --radius-md: 12px;
+  --radius-sm: 8px;
+  
+  --spacing-section: var(--section-padding);
+}
+
+@layer base {
+  @media (pointer: fine) {
+    html, body {
+      cursor: none;
+    }
+    a, button, select, input, textarea, [role="button"], .cursor-pointer {
+      cursor: none !important;
+    }
+  }
+
+  html {
+    scroll-behavior: smooth;
+  }
+  
+  body {
+    @apply bg-background text-foreground font-body leading-relaxed;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+  }
+
+  h1, h2, h3, h4, h5, h6 {
+    @apply font-heading font-bold text-secondary tracking-tight;
+  }
+
+  /* Premium Custom Text Selection */
+  ::selection {
+    background-color: hsl(var(--primary));
+    color: hsl(var(--primary-foreground));
+  }
+
+  ::-moz-selection {
+    background-color: hsl(var(--primary));
+    color: hsl(var(--primary-foreground));
+  }
+}
+
+@layer utilities {
+  .font-heading {
+    font-family: var(--font-heading);
+    letter-spacing: -0.02em;
+  }
+  .font-body {
+    font-family: var(--font-body);
+    line-height: 1.7;
+  }
+  .container-custom {
+    @apply max-w-7xl mx-auto px-4 sm:px-6 lg:px-8;
+  }
+  .section-padding {
+    @apply py-20 md:py-32;
+  }
+  
+  /* Premium UI Classes */
+  .glass-panel {
+    @apply bg-white/70 backdrop-blur-xl border border-white/40 shadow-[0_8px_30px_rgb(0,0,0,0.04)];
+  }
+  .glass-panel-dark {
+    @apply bg-secondary/70 backdrop-blur-xl border border-white/10 shadow-[0_8px_30px_rgb(0,0,0,0.12)];
+  }
+  
+  /* Smooth section backgrounds */
+  .bg-gradient-radial {
+    background: radial-gradient(circle at center, var(--tw-gradient-stops));
+  }
+  
+  .text-gradient {
+    @apply bg-clip-text text-transparent bg-gradient-to-r from-primary to-blue-400;
+  }
+  
+  .premium-shadow {
+    @apply shadow-[0_20px_50px_rgba(8,16,36,0.06)];
+  }
+}
+
+@layer components {
+  .btn-primary {
+    @apply relative overflow-hidden inline-flex items-center justify-center text-center bg-primary text-white font-heading font-bold uppercase tracking-widest text-sm px-8 py-3.5 rounded-full transition-all duration-300 shadow-[0_4px_14px_rgba(5,165,199,0.2)] hover:shadow-[0_6px_20px_rgba(5,165,199,0.3)] hover:-translate-y-[2px];
+  }
+  
+  /* Animated shine effect inside button */
+  .btn-primary::after {
+    content: '';
+    @apply absolute top-0 left-[-100%] w-1/2 h-full bg-gradient-to-r from-transparent via-white/25 to-transparent skew-x-[-20deg] transition-all duration-700 ease-in-out;
+  }
+  .btn-primary:hover::after {
+    @apply left-[200%];
+  }
+
+  .btn-secondary {
+    @apply inline-flex items-center justify-center text-center bg-secondary text-white font-heading font-bold uppercase tracking-widest text-sm px-8 py-3.5 rounded-full transition-all duration-300 hover:bg-secondary/90 shadow-md hover:shadow-lg hover:-translate-y-1;
+  }
+
+  .btn-accent {
+    @apply inline-flex items-center justify-center px-8 py-3.5 font-heading text-[14px] font-bold tracking-wide transition-all duration-300 rounded-full bg-accent text-secondary hover:bg-primary hover:text-white hover:shadow-[0_8px_20px_rgba(4,147,177,0.25)] hover:-translate-y-[1px] active:translate-y-0;
+  }
+
+  .btn-outline {
+    @apply inline-flex items-center justify-center px-8 py-3.5 font-heading text-[14px] font-bold tracking-wide transition-all duration-300 rounded-full border-[1.5px] border-border text-secondary hover:border-primary hover:text-primary hover:bg-primary/5 hover:-translate-y-[1px] active:translate-y-0;
+  }
+
+  /* Section Variants */
+  .section-white {
+    @apply bg-white py-20 md:py-28;
+  }
+
+  .section-dark {
+    @apply bg-secondary text-white py-20 md:py-28;
+  }
+
+  .section-muted {
+    @apply bg-muted py-20 md:py-28;
+  }
+}
+
+@layer utilities {
+  .glass {
+    @apply bg-white/5 backdrop-blur-md border border-white/10 shadow-[0_4px_12px_rgba(0,0,0,0.05)];
+  }
+  
+  .glass-dark {
+    @apply bg-secondary/70 backdrop-blur-xl border border-white/5 shadow-[0_8px_24px_rgba(0,0,0,0.2)];
+  }
+  
+  .premium-shadow {
+    @apply shadow-[0_12px_32px_rgba(3,7,18,0.08)];
+  }
+}
+
+/* Custom Effects */
+.text-stroke {
+  -webkit-text-stroke: 1px rgba(255, 255, 255, 0.2);
+  color: transparent;
+}
+
+.transition-prozen {
+  @apply transition-all duration-300 ease-in-out;
+}
+
+.font-heading {
+  font-family: var(--font-heading);
+}
+
+.font-body {
+  font-family: var(--font-body);
+}

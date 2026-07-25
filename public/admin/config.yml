@@ -1,0 +1,21 @@
+backend:
+  name: git-gateway
+  branch: main # Update if your branch is named 'master'
+
+media_folder: "public/uploads"
+public_folder: "/uploads"
+
+collections:
+  - name: "pages"
+    label: "Pages"
+    files:
+      - file: "content/pages/home.json"
+        label: "Home Page"
+        name: "home"
+        fields:
+          - { label: "Meta Title", name: "metaTitle", widget: "string" }
+          - { label: "Meta Description", name: "metaDescription", widget: "text" }
+          - { label: "Keywords", name: "keywords", widget: "string", required: false }
+          - { label: "Canonical URL", name: "canonicalUrl", widget: "string", required: false }
+          - { label: "Hero Title", name: "heroTitle", widget: "string" }
+          - { label: "Hero Description", name: "heroDescription", widget: "text" }

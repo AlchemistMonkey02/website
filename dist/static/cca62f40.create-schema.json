@@ -1,0 +1,1278 @@
+[
+  {
+    "fields": [
+      {
+        "initialValue": "About Company",
+        "name": "subtitle",
+        "type": "string"
+      },
+      {
+        "name": "title",
+        "type": "string"
+      },
+      {
+        "rows": 4,
+        "name": "description",
+        "type": "text"
+      },
+      {
+        "name": "experienceYears",
+        "type": "string",
+        "title": "Years of Experience"
+      },
+      {
+        "of": [
+          {
+            "type": "string"
+          }
+        ],
+        "name": "features",
+        "type": "array"
+      },
+      {
+        "options": {
+          "hotspot": true
+        },
+        "fields": [
+          {
+            "description": "Important for SEO and accessibility.",
+            "name": "alt",
+            "type": "string",
+            "title": "Alternative Text"
+          }
+        ],
+        "name": "mainImage",
+        "type": "image"
+      }
+    ],
+    "name": "about",
+    "type": "document",
+    "title": "About Section"
+  },
+  {
+    "fields": [
+      {
+        "description": "The main heading of the hero section",
+        "name": "title",
+        "type": "string"
+      },
+      {
+        "description": "The text that appears in a different color (e.g., BUSINESS SOLUTIONS)",
+        "name": "highlightText",
+        "type": "string"
+      },
+      {
+        "rows": 3,
+        "name": "description",
+        "type": "text"
+      },
+      {
+        "name": "ctaText",
+        "type": "string",
+        "title": "CTA Button Text"
+      },
+      {
+        "initialValue": "/services",
+        "description": "Default is /services",
+        "name": "ctaLink",
+        "type": "string",
+        "title": "CTA Button Link"
+      },
+      {
+        "description": "Text for the second button (e.g., Apply by Yourself)",
+        "name": "ctaText2",
+        "type": "string",
+        "title": "Secondary CTA Button Text"
+      },
+      {
+        "initialValue": "/eligibility",
+        "description": "Default is /eligibility",
+        "name": "ctaLink2",
+        "type": "string",
+        "title": "Secondary CTA Button Link"
+      },
+      {
+        "options": {
+          "hotspot": true
+        },
+        "fields": [
+          {
+            "description": "Important for SEO and accessibility.",
+            "name": "alt",
+            "type": "string",
+            "title": "Alternative Text"
+          }
+        ],
+        "name": "mainImage",
+        "type": "image",
+        "title": "Main Hero Image"
+      },
+      {
+        "of": [
+          {
+            "fields": [
+              {
+                "name": "value",
+                "type": "string"
+              },
+              {
+                "name": "label",
+                "type": "string"
+              }
+            ],
+            "type": "object"
+          }
+        ],
+        "name": "stats",
+        "type": "array",
+        "title": "Stat Cards"
+      }
+    ],
+    "name": "hero",
+    "type": "document",
+    "title": "Hero Section"
+  },
+  {
+    "fields": [
+      {
+        "description": "Internal name for the page (e.g., Home, About)",
+        "name": "pageName",
+        "type": "string"
+      },
+      {
+        "options": {
+          "source": "pageName"
+        },
+        "validation": [
+          {
+            "rules": [
+              {
+                "flag": "custom"
+              }
+            ],
+            "level": "error"
+          }
+        ],
+        "description": "The path for this page (e.g., about, services)",
+        "name": "slug",
+        "type": "slug",
+        "title": "Page Slug"
+      },
+      {
+        "validation": [
+          {
+            "rules": [
+              {
+                "flag": "max",
+                "constraint": 60
+              }
+            ],
+            "level": "warning",
+            "message": "Titles should be under 60 characters"
+          }
+        ],
+        "name": "title",
+        "type": "string",
+        "title": "Meta Title"
+      },
+      {
+        "rows": 3,
+        "validation": [
+          {
+            "rules": [
+              {
+                "flag": "max",
+                "constraint": 160
+              }
+            ],
+            "level": "warning",
+            "message": "Descriptions should be under 160 characters"
+          }
+        ],
+        "name": "description",
+        "type": "text",
+        "title": "Meta Description"
+      },
+      {
+        "description": "Comma separated keywords",
+        "name": "keywords",
+        "type": "string"
+      },
+      {
+        "options": {
+          "hotspot": true
+        },
+        "name": "ogImage",
+        "type": "image",
+        "title": "OG Image"
+      },
+      {
+        "initialValue": false,
+        "description": "Turn this on if you DO NOT want this page to show up on Google.",
+        "name": "noIndex",
+        "type": "boolean",
+        "title": "Hide from Search Engines (Noindex)"
+      }
+    ],
+    "name": "pageSeo",
+    "type": "document",
+    "title": "Page SEO"
+  },
+  {
+    "fields": [
+      {
+        "name": "title",
+        "type": "string"
+      },
+      {
+        "options": {
+          "source": "title",
+          "maxLength": 96
+        },
+        "validation": [
+          {
+            "rules": [
+              {
+                "flag": "custom"
+              }
+            ],
+            "level": "error"
+          }
+        ],
+        "name": "slug",
+        "type": "slug"
+      },
+      {
+        "options": {
+          "list": [
+            {
+              "title": "Govt. Schemes & Grants",
+              "value": "schemes"
+            },
+            {
+              "title": "IT Services",
+              "value": "it"
+            },
+            {
+              "title": "AI Services",
+              "value": "ai"
+            },
+            {
+              "title": "Marketing Services",
+              "value": "marketing"
+            },
+            {
+              "title": "Legal & Compliance",
+              "value": "legal"
+            }
+          ],
+          "layout": "radio"
+        },
+        "initialValue": "schemes",
+        "name": "category",
+        "type": "string",
+        "title": "Service Category"
+      },
+      {
+        "rows": 2,
+        "name": "description",
+        "type": "text",
+        "title": "Short Description"
+      },
+      {
+        "description": "Name of the Lucide icon to use (e.g., Search, Briefcase)",
+        "name": "icon",
+        "type": "string",
+        "title": "Icon Name (Lucide)"
+      },
+      {
+        "options": {
+          "hotspot": true
+        },
+        "name": "mainImage",
+        "type": "image"
+      },
+      {
+        "of": [
+          {
+            "marks": {
+              "annotations": [
+                {
+                  "i18nTitleKey": "inputs.portable-text.annotation.link",
+                  "options": {
+                    "modal": {
+                      "type": "popover"
+                    }
+                  },
+                  "fields": [
+                    {
+                      "validation": [
+                        {
+                          "rules": [
+                            {
+                              "flag": "uri",
+                              "constraint": {
+                                "options": {
+                                  "scheme": [
+                                    "/^http$/",
+                                    "/^https$/",
+                                    "/^tel$/",
+                                    "/^mailto$/"
+                                  ],
+                                  "allowRelative": true,
+                                  "relativeOnly": false,
+                                  "allowCredentials": false
+                                }
+                              }
+                            }
+                          ],
+                          "level": "error"
+                        }
+                      ],
+                      "description": "A valid web, email, phone, or relative link.",
+                      "name": "href",
+                      "type": "url",
+                      "title": "Link"
+                    }
+                  ],
+                  "name": "link",
+                  "type": "object"
+                }
+              ],
+              "decorators": [
+                {
+                  "value": "strong",
+                  "title": "Strong"
+                },
+                {
+                  "value": "em",
+                  "title": "Italic"
+                },
+                {
+                  "value": "code",
+                  "title": "Code"
+                },
+                {
+                  "value": "underline",
+                  "title": "Underline"
+                },
+                {
+                  "value": "strike-through",
+                  "title": "Strike"
+                }
+              ]
+            },
+            "lists": [
+              {
+                "value": "bullet",
+                "title": "Bulleted list"
+              },
+              {
+                "value": "number",
+                "title": "Numbered list"
+              }
+            ],
+            "styles": [
+              {
+                "value": "normal",
+                "title": "Normal"
+              },
+              {
+                "value": "h1",
+                "title": "Heading 1"
+              },
+              {
+                "value": "h2",
+                "title": "Heading 2"
+              },
+              {
+                "value": "h3",
+                "title": "Heading 3"
+              },
+              {
+                "value": "h4",
+                "title": "Heading 4"
+              },
+              {
+                "value": "h5",
+                "title": "Heading 5"
+              },
+              {
+                "value": "h6",
+                "title": "Heading 6"
+              },
+              {
+                "value": "blockquote",
+                "title": "Quote"
+              }
+            ],
+            "of": [],
+            "type": "block"
+          }
+        ],
+        "name": "content",
+        "type": "array"
+      },
+      {
+        "name": "subtitle",
+        "type": "string",
+        "title": "Subtitle / Badge Text (e.g., Upto ₹25 Lakh Funding)"
+      },
+      {
+        "of": [
+          {
+            "fields": [
+              {
+                "name": "title",
+                "type": "string",
+                "title": "Benefit Title"
+              },
+              {
+                "rows": 2,
+                "name": "description",
+                "type": "text",
+                "title": "Benefit Description"
+              },
+              {
+                "description": "Available icons: e.g., Zap, Globe, Shield",
+                "name": "icon",
+                "type": "string",
+                "title": "Icon Name"
+              }
+            ],
+            "type": "object"
+          }
+        ],
+        "name": "benefits",
+        "type": "array",
+        "title": "Key Benefits List"
+      },
+      {
+        "of": [
+          {
+            "fields": [
+              {
+                "name": "title",
+                "type": "string",
+                "title": "Feature Title"
+              },
+              {
+                "rows": 2,
+                "name": "desc",
+                "type": "text",
+                "title": "Feature Description"
+              }
+            ],
+            "type": "object"
+          }
+        ],
+        "name": "features",
+        "type": "array",
+        "title": "Features List"
+      },
+      {
+        "name": "process",
+        "type": "string",
+        "title": "Our Process (e.g. Apply -> Pitch -> Get Funded)"
+      },
+      {
+        "rows": 3,
+        "initialValue": "<iframe src=\"https://venturenodes.com/services/YOUR-SLUG-HERE\" width=\"100%\" height=\"500\" style=\"border:none;\"></iframe>",
+        "description": "You can copy this snippet to embed this service on external websites. Replace \"YOUR-SLUG-HERE\" with the actual slug of this service.",
+        "name": "embedCodeHelper",
+        "type": "text",
+        "title": "Embed HTML Snippet Helper (For Backlinks)"
+      },
+      {
+        "description": "Configure rules for this service to appear in the Eligibility Checker tool.",
+        "fields": [
+          {
+            "initialValue": false,
+            "name": "showInChecker",
+            "type": "boolean",
+            "title": "Show in Eligibility Checker?"
+          },
+          {
+            "options": {
+              "list": [
+                "All",
+                "IT/Tech",
+                "Agriculture",
+                "Manufacturing",
+                "Healthcare",
+                "General/Other",
+                "E-commerce"
+              ]
+            },
+            "of": [
+              {
+                "type": "string"
+              }
+            ],
+            "name": "sectors",
+            "type": "array",
+            "title": "Eligible Sectors"
+          },
+          {
+            "options": {
+              "list": [
+                "Idea",
+                "Prototype",
+                "Early Traction",
+                "Scaling"
+              ]
+            },
+            "of": [
+              {
+                "type": "string"
+              }
+            ],
+            "name": "stages",
+            "type": "array",
+            "title": "Eligible Startup Stages"
+          },
+          {
+            "initialValue": 0,
+            "description": "Set to 0 if pre-revenue startups are eligible.",
+            "name": "minRevenue",
+            "type": "number",
+            "title": "Minimum Revenue Required (in ₹)"
+          }
+        ],
+        "name": "eligibilityRules",
+        "type": "object",
+        "title": "Eligibility Checker Rules"
+      },
+      {
+        "of": [
+          {
+            "fields": [
+              {
+                "name": "question",
+                "type": "string"
+              },
+              {
+                "name": "answer",
+                "type": "text"
+              }
+            ],
+            "type": "object"
+          }
+        ],
+        "name": "faqs",
+        "type": "array",
+        "title": "Frequently Asked Questions (SEO Section)"
+      },
+      {
+        "description": "List compelling reasons to choose your agency.",
+        "of": [
+          {
+            "type": "string"
+          }
+        ],
+        "name": "whyChooseUs",
+        "type": "array",
+        "title": "Why Choose Us (SEO Section)"
+      },
+      {
+        "description": "Optional pricing details (e.g. Starts at $500, Custom Quote).",
+        "name": "pricing",
+        "type": "string",
+        "title": "Pricing Info (Optional)"
+      },
+      {
+        "of": [
+          {
+            "fields": [
+              {
+                "name": "quote",
+                "type": "text"
+              },
+              {
+                "name": "author",
+                "type": "string",
+                "title": "Author Name"
+              },
+              {
+                "name": "company",
+                "type": "string",
+                "title": "Company (Optional)"
+              }
+            ],
+            "type": "object"
+          }
+        ],
+        "name": "testimonials",
+        "type": "array",
+        "title": "Testimonials (E-E-A-T Section)"
+      },
+      {
+        "fields": [
+          {
+            "initialValue": "Ready to Get Started?",
+            "name": "title",
+            "type": "string",
+            "title": "CTA Headline"
+          },
+          {
+            "initialValue": "Contact Us Now",
+            "name": "buttonText",
+            "type": "string"
+          },
+          {
+            "initialValue": "/contact",
+            "name": "buttonLink",
+            "type": "string"
+          }
+        ],
+        "name": "cta",
+        "type": "object",
+        "title": "Call to Action (CTA)"
+      },
+      {
+        "name": "seo",
+        "type": "seo",
+        "title": "SEO Settings"
+      }
+    ],
+    "name": "service",
+    "type": "document"
+  },
+  {
+    "fields": [
+      {
+        "name": "title",
+        "type": "string",
+        "title": "Page Title (Internal)"
+      },
+      {
+        "options": {
+          "source": "title"
+        },
+        "validation": [
+          {
+            "rules": [
+              {
+                "flag": "custom"
+              }
+            ],
+            "level": "error"
+          }
+        ],
+        "name": "slug",
+        "type": "slug"
+      },
+      {
+        "name": "seo",
+        "type": "seo",
+        "title": "SEO Settings"
+      },
+      {
+        "fields": [
+          {
+            "name": "heroTitle",
+            "type": "string"
+          },
+          {
+            "name": "heroSubtitle",
+            "type": "string"
+          },
+          {
+            "name": "description",
+            "type": "text"
+          },
+          {
+            "of": [
+              {
+                "fields": [
+                  {
+                    "name": "question",
+                    "type": "string"
+                  },
+                  {
+                    "name": "answer",
+                    "type": "text"
+                  }
+                ],
+                "type": "object"
+              }
+            ],
+            "name": "faqs",
+            "type": "array",
+            "title": "Frequently Asked Questions (SEO Section)"
+          },
+          {
+            "of": [
+              {
+                "type": "string"
+              }
+            ],
+            "name": "whyChooseUs",
+            "type": "array",
+            "title": "Why Choose Us (SEO Section)"
+          },
+          {
+            "of": [
+              {
+                "fields": [
+                  {
+                    "name": "quote",
+                    "type": "text"
+                  },
+                  {
+                    "name": "author",
+                    "type": "string",
+                    "title": "Author Name"
+                  },
+                  {
+                    "name": "company",
+                    "type": "string"
+                  }
+                ],
+                "type": "object"
+              }
+            ],
+            "name": "testimonials",
+            "type": "array",
+            "title": "Testimonials (E-E-A-T Section)"
+          },
+          {
+            "fields": [
+              {
+                "name": "title",
+                "type": "string",
+                "title": "CTA Headline"
+              },
+              {
+                "name": "buttonText",
+                "type": "string"
+              },
+              {
+                "name": "buttonLink",
+                "type": "string"
+              }
+            ],
+            "name": "cta",
+            "type": "object",
+            "title": "Call to Action (CTA)"
+          }
+        ],
+        "name": "content",
+        "type": "object",
+        "title": "Page Content"
+      }
+    ],
+    "name": "page",
+    "type": "document",
+    "title": "Pages"
+  },
+  {
+    "fields": [
+      {
+        "description": "e.g., 45K+, 99.9%",
+        "name": "value",
+        "type": "string"
+      },
+      {
+        "description": "e.g., Happy Clients",
+        "name": "label",
+        "type": "string"
+      },
+      {
+        "description": "Available icons: users, briefcase, award, zap, globe, shield, target",
+        "name": "icon",
+        "type": "string",
+        "title": "Icon Name"
+      }
+    ],
+    "name": "stats",
+    "type": "document"
+  },
+  {
+    "fields": [
+      {
+        "description": "e.g., 01, 02, 03",
+        "name": "num",
+        "type": "string",
+        "title": "Step Number"
+      },
+      {
+        "name": "title",
+        "type": "string"
+      },
+      {
+        "rows": 3,
+        "name": "description",
+        "type": "text"
+      },
+      {
+        "description": "Available icons: search, settings, rocket, zap",
+        "name": "icon",
+        "type": "string",
+        "title": "Icon Name"
+      }
+    ],
+    "name": "process",
+    "type": "document",
+    "title": "Process Steps"
+  },
+  {
+    "fields": [
+      {
+        "name": "question",
+        "type": "string"
+      },
+      {
+        "name": "answer",
+        "type": "text"
+      }
+    ],
+    "name": "faq",
+    "type": "document",
+    "title": "FAQs"
+  },
+  {
+    "fields": [
+      {
+        "description": "e.g., MapPin, Phone, Mail",
+        "name": "icon",
+        "type": "string",
+        "title": "Icon Name"
+      },
+      {
+        "name": "title",
+        "type": "string"
+      },
+      {
+        "description": "Each line of contact info (e.g., address line 1, phone number)",
+        "of": [
+          {
+            "type": "string"
+          }
+        ],
+        "name": "details",
+        "type": "array"
+      },
+      {
+        "description": "e.g., bg-orange-100 text-primary",
+        "name": "color",
+        "type": "string",
+        "title": "CSS Color Classes"
+      }
+    ],
+    "name": "contactInfo",
+    "type": "document",
+    "title": "Contact Information"
+  },
+  {
+    "fields": [
+      {
+        "validation": [
+          {
+            "rules": [
+              {
+                "flag": "max",
+                "constraint": 60
+              }
+            ],
+            "level": "warning",
+            "message": "Titles should be under 60 characters"
+          }
+        ],
+        "name": "metaTitle",
+        "type": "string"
+      },
+      {
+        "rows": 3,
+        "validation": [
+          {
+            "rules": [
+              {
+                "flag": "max",
+                "constraint": 160
+              }
+            ],
+            "level": "warning",
+            "message": "Descriptions should be under 160 characters"
+          }
+        ],
+        "name": "metaDescription",
+        "type": "text"
+      },
+      {
+        "description": "Comma separated keywords",
+        "name": "metaKeywords",
+        "type": "string"
+      },
+      {
+        "options": {
+          "hotspot": true
+        },
+        "name": "ogImage",
+        "type": "image",
+        "title": "Open Graph Image"
+      },
+      {
+        "validation": [
+          {
+            "rules": [
+              {
+                "flag": "uri",
+                "constraint": {
+                  "options": {
+                    "scheme": [
+                      "/^http$/",
+                      "/^https$/"
+                    ],
+                    "allowRelative": false,
+                    "relativeOnly": false,
+                    "allowCredentials": false
+                  }
+                }
+              }
+            ],
+            "level": "error"
+          }
+        ],
+        "description": "If left empty, the current page URL will be used.",
+        "name": "canonicalUrl",
+        "type": "url",
+        "title": "Canonical URL"
+      },
+      {
+        "initialValue": false,
+        "description": "Turn this on if you DO NOT want this page to show up on Google.",
+        "name": "noIndex",
+        "type": "boolean",
+        "title": "Hide from Search Engines (Noindex)"
+      }
+    ],
+    "name": "seo",
+    "type": "object",
+    "title": "SEO"
+  },
+  {
+    "fields": [
+      {
+        "options": {
+          "hotspot": true
+        },
+        "description": "Upload an image logo. If uploaded, it will be used instead of logo text.",
+        "name": "logoImage",
+        "type": "image"
+      },
+      {
+        "name": "logoText",
+        "type": "string"
+      },
+      {
+        "name": "logoTextHighlight",
+        "type": "string"
+      },
+      {
+        "name": "address",
+        "type": "string"
+      },
+      {
+        "validation": [
+          {
+            "rules": [
+              {
+                "flag": "uri",
+                "constraint": {
+                  "options": {
+                    "scheme": [
+                      "/^http$/",
+                      "/^https$/"
+                    ],
+                    "allowRelative": false,
+                    "relativeOnly": false,
+                    "allowCredentials": false
+                  }
+                }
+              }
+            ],
+            "level": "error"
+          }
+        ],
+        "name": "locationLink",
+        "type": "url",
+        "title": "Location Google Maps Link"
+      },
+      {
+        "name": "phone",
+        "type": "string",
+        "title": "Phone Number"
+      },
+      {
+        "name": "email",
+        "type": "string",
+        "title": "Email Address"
+      },
+      {
+        "of": [
+          {
+            "fields": [
+              {
+                "name": "platform",
+                "type": "string"
+              },
+              {
+                "validation": [
+                  {
+                    "rules": [
+                      {
+                        "flag": "uri",
+                        "constraint": {
+                          "options": {
+                            "scheme": [
+                              "/^http$/",
+                              "/^https$/"
+                            ],
+                            "allowRelative": false,
+                            "relativeOnly": false,
+                            "allowCredentials": false
+                          }
+                        }
+                      }
+                    ],
+                    "level": "error"
+                  }
+                ],
+                "name": "url",
+                "type": "url",
+                "title": "URL"
+              },
+              {
+                "name": "icon",
+                "type": "string",
+                "title": "Icon (Lucide name)"
+              }
+            ],
+            "type": "object"
+          }
+        ],
+        "name": "socialLinks",
+        "type": "array"
+      },
+      {
+        "rows": 3,
+        "name": "footerDescription",
+        "type": "text"
+      },
+      {
+        "name": "copyrightText",
+        "type": "string"
+      },
+      {
+        "description": "Define the main header links and multi-tier submenus.",
+        "of": [
+          {
+            "fields": [
+              {
+                "name": "name",
+                "type": "string",
+                "title": "Link Name"
+              },
+              {
+                "name": "href",
+                "type": "string",
+                "title": "Link URL (e.g., /, /about, /services)"
+              },
+              {
+                "of": [
+                  {
+                    "fields": [
+                      {
+                        "name": "name",
+                        "type": "string",
+                        "title": "Submenu Link Name"
+                      },
+                      {
+                        "name": "href",
+                        "type": "string",
+                        "title": "Submenu Link URL"
+                      }
+                    ],
+                    "type": "object",
+                    "name": "submenuItem"
+                  }
+                ],
+                "name": "submenu",
+                "type": "array",
+                "title": "Submenu Links"
+              }
+            ],
+            "type": "object",
+            "name": "navItem"
+          }
+        ],
+        "name": "navbarLinks",
+        "type": "array",
+        "title": "Navbar Navigation Links"
+      },
+      {
+        "of": [
+          {
+            "fields": [
+              {
+                "name": "name",
+                "type": "string",
+                "title": "Link Name"
+              },
+              {
+                "name": "href",
+                "type": "string",
+                "title": "Link URL"
+              }
+            ],
+            "type": "object",
+            "name": "footerLink"
+          }
+        ],
+        "name": "footerQuickLinks",
+        "type": "array"
+      },
+      {
+        "description": "List the locations of your offices (e.g., Jaipur, Gurugram)",
+        "of": [
+          {
+            "type": "string"
+          }
+        ],
+        "name": "footerOffices",
+        "type": "array",
+        "title": "Our Offices (Footer)"
+      },
+      {
+        "rows": 3,
+        "description": "Disclaimer displayed at the bottom of the footer.",
+        "name": "disclaimer",
+        "type": "text",
+        "title": "Footer Disclaimer Text"
+      },
+      {
+        "description": "e.g. Eligibility Engine",
+        "name": "eligibilitySubtitle",
+        "type": "string",
+        "title": "Eligibility Checker Subtitle"
+      },
+      {
+        "description": "e.g. Find Your Perfect Schemes",
+        "name": "eligibilityTitle",
+        "type": "string",
+        "title": "Eligibility Checker Title"
+      },
+      {
+        "rows": 3,
+        "name": "eligibilityDescription",
+        "type": "text",
+        "title": "Eligibility Checker Description"
+      }
+    ],
+    "name": "siteSettings",
+    "type": "document"
+  },
+  {
+    "fields": [
+      {
+        "name": "name",
+        "type": "string"
+      },
+      {
+        "name": "email",
+        "type": "string"
+      },
+      {
+        "name": "phone",
+        "type": "string"
+      },
+      {
+        "name": "subject",
+        "type": "string"
+      },
+      {
+        "name": "message",
+        "type": "text"
+      },
+      {
+        "name": "submittedAt",
+        "type": "datetime"
+      }
+    ],
+    "name": "contactSubmission",
+    "type": "document",
+    "title": "Contact Submissions"
+  },
+  {
+    "fields": [
+      {
+        "name": "title",
+        "type": "string",
+        "title": "Title / Caption"
+      },
+      {
+        "options": {
+          "list": [
+            {
+              "title": "Instagram",
+              "value": "instagram"
+            },
+            {
+              "title": "YouTube Shorts",
+              "value": "youtube"
+            },
+            {
+              "title": "Direct Video Link (MP4)",
+              "value": "other"
+            }
+          ]
+        },
+        "initialValue": "instagram",
+        "name": "platform",
+        "type": "string"
+      },
+      {
+        "validation": [
+          {
+            "rules": [
+              {
+                "flag": "uri",
+                "constraint": {
+                  "options": {
+                    "scheme": [
+                      "/^http$/",
+                      "/^https$/"
+                    ],
+                    "allowRelative": false,
+                    "relativeOnly": false,
+                    "allowCredentials": false
+                  }
+                }
+              }
+            ],
+            "level": "error"
+          }
+        ],
+        "description": "The link to the Instagram Reel, YouTube short, or MP4 file. For Instagram, paste the post link (e.g., https://www.instagram.com/reel/Cxxxxxxx/).",
+        "name": "videoUrl",
+        "type": "url",
+        "title": "Video / Embed URL"
+      },
+      {
+        "initialValue": true,
+        "name": "isActive",
+        "type": "boolean"
+      },
+      {
+        "initialValue": 0,
+        "name": "order",
+        "type": "number",
+        "title": "Display Order"
+      }
+    ],
+    "name": "reel",
+    "type": "document",
+    "title": "Social Reels"
+  }
+]
